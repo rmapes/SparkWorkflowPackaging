@@ -1,0 +1,49 @@
+<component
+	xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/component/1.1.2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/component/1.1.2 http://maven.apache.org/xsd/component-1.1.2.xsd">
+	<fileSets>
+		<fileSet>
+			<directory>${project.basedir}/dist/notices</directory>
+			<outputDirectory>/</outputDirectory>
+			<includes>
+				<include>README*</include>
+				<include>LICENSE*</include>
+				<include>NOTICE*</include>
+			</includes>
+		</fileSet>
+		<fileSet>
+			<directory>${project.basedir}/dist/config</directory>
+			<outputDirectory>config</outputDirectory>
+		</fileSet>
+		<fileSet>
+			<directory>${project.basedir}/dist/docs</directory>
+			<outputDirectory>docs</outputDirectory>
+		</fileSet>
+		<fileSet>
+			<directory>${project.basedir}/dist/logs</directory>
+			<outputDirectory>logs</outputDirectory>
+		</fileSet>
+		<fileSet>
+			<directory>${project.basedir}/dist/workflows</directory>
+			<outputDirectory>workflows</outputDirectory>
+		</fileSet>
+	</fileSets>
+	<dependencySets>
+		<dependencySet> <!-- All libs -->
+			<outputDirectory>lib</outputDirectory>
+			<useTransitiveDependencies>true</useTransitiveDependencies>
+			<useTransitiveFiltering>true</useTransitiveFiltering>
+		</dependencySet>
+		<!--  dependencySet>
+			<outputDirectory>docs/api/</outputDirectory>
+			<includes>
+				<include>*:javadoc</include>
+			</includes>
+			<unpack>true</unpack>
+			<useTransitiveDependencies>true</useTransitiveDependencies>
+			<useProjectArtifact>false</useProjectArtifact>
+			<useStrictFiltering>true</useStrictFiltering>
+		</dependencySet -->
+	</dependencySets>
+</component>
