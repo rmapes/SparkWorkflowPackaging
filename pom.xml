@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.chronomus</groupId>
   <artifactId>Spark</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>pom</packaging>
   <build>
   	<plugins>
@@ -39,7 +39,7 @@
   	<dependency>
   		<groupId>com.chronomus</groupId>
   		<artifactId>spark-core</artifactId>
-  		<version>1.0.1-SNAPSHOT</version>
+  		<version>1.0.1</version>
   	</dependency>
   </dependencies>
 </project>
